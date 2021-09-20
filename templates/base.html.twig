@@ -1,19 +1,168 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {# Run `composer require symfony/webpack-encore-bundle`
-           and uncomment the following Encore helpers to start using Symfony UX #}
-        {% block stylesheets %}
-            {#{{ encore_entry_link_tags('app') }}#}
-        {% endblock %}
+{{ include('includes/header.html.twig') }}
+<title>{% block title %}Accueil - Crown Creative{% endblock %}</title>
+</head>
+<body>
+    
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
+    <div class="topdiv">
+
+
+         {{ include('includes/nav.html.twig') }}
+
+                    <div class="textbloc">
+
+                        <h1> Grandissez !</h1>
+                        <p> Bienvenue, apprêtez-vous pour un voyage merveilleux avec les créatifs que nous sommes.</p>
+                        <a href="#Blog">Je m'envole....</a>
+
+                    </div>
+
+        
+        
+        </div>
+        {% block content %} 
+        <!--        Deuxieme partie -->
+                   <div class="middiv">
+
+                        
+
+                    <div class="middivtop">   
+                        <p>
+                            Chez Crown Creative nous créons des marques de valeur qui reposent sur un ensemble de valeur et de vision.
+                        </p>
+
+                        <h1>Découvrez le Branding réinventé</h1>
+                        <h2>Notre objectif est des vous faire grandir en utilisant la puissance du digital</h2>
+                    </div> 
+                    
+                    <div class="middivmain">
+
+                        <div class="middivmaintilte">
+                            <h1 id="services"> Nos compétences </h1>
+                        </div>
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/Impression.png') }}" alt="Impression">
+                            <h1>Travaux d’impression</h1>
+                            <p>Nous proposons diverses solutions d’impressions. De l’accompagnement à la mise de votre support de communication (flyer, cartes de visite, Kakemono…). Un service complet pour un projet réussi tout en bénéficiant des avantages de l’impression numérique.</p>
+                         </div>
+
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/icons8_account_64.png') }}" alt="Référencement">
+                            <h1>Référencement web</h1>
+                            <p>Nous analysons votre site web pour un excellent référencement afin de le faire apparaitre en top de recherches Google.</p>
+                         </div>
+
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/Developpement.png') }}" alt="Développement">
+                            <h1>Développement web</h1>
+                            <p>Notre équipe de développeurs tous certifiés engagés et disponibles se met à pied d’œuvre pour vous offrir le meilleur site web.</p>
+                         </div>
+
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/Hebergement_64.png') }}" alt="Hébergement">
+                            <h1>Hébergement web</h1>
+                            <p>Nous disposons de serveurs disponibles H24 sans interruption pour accueillir vos sites et applications web avec une fluidité et une rapidité sans équivaut.</p>
+                         </div>
+
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/Marketing digital_64.png') }}" alt="Marketing">
+                            <h1>Marketing digital</h1>
+                            <p>Bénéficiez de l’expérience de nos commerciaux dynamiques et certifiés afin d’établir les meilleures stratégies qui vont faire exploser votre visibilité et faire connaitre votre entreprise.</p>
+                         </div>
+
+                         <div class="cardhome">
+                            <img src="{{ asset('assets/img/Design_64.png') }}" alt="Design">
+                            <h1>Design graphique</h1>
+                            <p>Nos créatifs se mettent à votre service afin de réaliser avec vous, pour vous des visuels percutants qui feront rêver vos prospects.</p>
+                         </div>
+                    </div>
+
+                    <div class="middivpart2">
+
+                        <div class="middivpart2sub1">
+
+                            <div class="middivpart2sub1flex1">
+                                <img src="{{ asset('assets/img/idee2.png') }}" alt="idee">
+                            </div>
+
+                            <div class="middivpart2sub1flex2">
+                                <h1> Vous avez les Idées...nous leurs donnons vies</h1>
+                                <div class="text">
+                                    
+                                        Le desing thinking est au centre de notre de méthode de travail.Ce qui donne à nos propositions le privilège d'être validés dés la presentation.
+                                        Notre équipe est composée de talents tous certifiés et excellents dans leurs domaines.
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="middivpart2sub2">
+                            <div class="middivpart2sub2flex1">
+                                <h1>Plus de 1172 finalisés à ce jour à travers le monde. </h1>
+                                <p>Les grandes collaborations de petites conversations.Passez à l'action!</p>
+                                <a href="#Blog">Nous contacter</a>
+                            </div>
+                            <div class="middivpart2sub2flex2">
+                                <img src="{{ asset('assets/img/Contactez_nous1.png') }}" alt="Contactez_nous">
+                            </div>
+                        </div>
+                    </div>
+                    <!-- troisieme maquette  -->
+                    <div class="middivpart3">
+
+                            <div class="middivpart3sub1flex1">
+                                <img src="{{ asset('assets/img/Catalogue1.png') }}" alt="Catalogue1">
+                            </div>
+
+                            <div class="middivpart3sub1flex2">
+                                <h1> Chez Crown Creative nous soutenons l'entrepreneuriat,nous croyons fortement en la puissance du Branding </h1>
+                                <p> Parcourez notre catalogue des ofres afin de choisir notre offre sur mesure et booster votre entreprise.</p>
+                                <a href="#Blog">Parcourir</a>
+                            </div>
+                            {% if testimonials is defined %}
+                            {% for testimonial in testimonials %}
+                                <div class="middivpart3sub2">
+                                    <div class="middivpart3sub2top">
+
+                                        <h1>Ils parlent de nous</h1>
+                                        <h2>{{ testimonial.lastname }} {{ testimonial.fisrtname }}</h2>
+                                        <p>{{ testimonial.job }}</p>
+
+                                    </div>
+
+                                    <div class="middivpart3sub2bottom">
+
+                                        <p>{{ testimonial.content }}</p>
+
+                                    </div>
+                                </div>
+                            {% endfor %}
+                            {% endif %}
+            {% endblock %}
+
+                            {{ include('includes/footer.html.twig') }}
+                    </div> 
+                    
+
+                 
+
+</body>
+                       
+                
+
+
+
+
+
+<script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "navbar") {
+        x.className += " responsive";
+      } else {
+        x.className = "navbar";
+      }
+    }
+    </script>
 </html>

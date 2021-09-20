@@ -1,0 +1,27 @@
+{{ include('includes/header.html.twig') }}
+<title>{% block title %}Nous contacter - Crown Creative{% endblock %}</title>
+</head>
+
+<body>
+
+    {{ include('includes/nav.html.twig') }}
+
+    <div class="container mt-5">
+        <h2>Contactez-nous</h2>
+        <p>N'hésitez pas à prendre contact avec notre équipe.</p>
+        <div class="row">
+            <div class="col-md-8">{{ form(form) }}</div>
+            <div class="col-md-4">
+                <strong>Crown Creative</strong>
+                <hr>
+                +227 91 42 10 30<br>
+                info@crowncreative.net<br>
+                Plateau, Niamey Niger
+
+            </div>
+        </div>
+    </div>
+
+
+    {{ include('includes/footer.html.twig') }}
+</body>
